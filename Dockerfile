@@ -29,7 +29,7 @@ RUN apt-get update \
     && apt-get clean
 
 RUN pip install wheel
-
+RUN sudo apt install python3-dev python3-pip
 RUN pip install --upgrade pip
 
 RUN pip install opencv-python
