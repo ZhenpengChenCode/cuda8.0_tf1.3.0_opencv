@@ -32,6 +32,9 @@ RUN pip install wheel
 
 RUN pip install --upgrade pip
 
+RUN pip install opencv-python
+RUN pip install opencv-contrib-python
+RUN pip install tensorflow-gpu==1.3.0
 
 CMD []
 ENTRYPOINT ["/bin/bash"]
