@@ -28,13 +28,14 @@ RUN apt-get update \
     && apt-get autoremove -y \
     && apt-get clean
 
-RUN pip install wheel
 RUN sudo apt install python3-dev python3-pip
-RUN pip install --upgrade pip
+RUN pip3 install wheel
 
-RUN pip install opencv-python
-RUN pip install opencv-contrib-python
-RUN pip install tensorflow-gpu==1.3.0
+RUN pip3 install --upgrade pip
+
+RUN pip3 install opencv-python
+RUN pip3 install opencv-contrib-python
+RUN pip3 install tensorflow-gpu==1.3.0
 
 CMD []
 ENTRYPOINT ["/bin/bash"]
